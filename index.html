@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malyx Shop | Creative Portfolio Showcase</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">
+    <img src="store.png" alt="Shop Logo" class="nav-logo">
+    Malyx Shop
+</div>
+<div class="search-container">
+            <i class="fas fa-search" onclick="toggleSearch()" style="cursor:pointer; font-size: 1.2rem;"></i>
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Malyx Shop</h1>
+        <p>Explore our premium catalog of professional visual assets and branding projects designed to elevate your business.</p>
+        <a href="#grid" class="explore-btn">Explore Portfolio</a>
+    </div>
+    <div class="hero-image">
+    <div class="slider">
+        <img src="https://i.postimg.cc/W3nGB36V/Whats-App-Image-2026-05-28-at-6-34-31-PM.jpg" class="slide active">
+        <img src="https://i.postimg.cc/nzk4yzYt/Whats-App-Image-2026-05-28-at-6-36-31-PM.jpg" class="slide">
+        <img src="https://i.postimg.cc/ydPmMdXq/Whats-App-Image-2026-05-28-at-6-37-29-PM.jpg" class="slide">
+        <img src="https://i.postimg.cc/yxpFNbbS/Whats-App-Image-2026-05-28-at-6-41-10-PM.jpg" class="slide">
+    </div>
+</div>
+</section>
+
+    <div class="showcase-filters">
+    <button class="showcase-filter-btn active" data-filter="all">All Works</button>
+    <button class="showcase-filter-btn" data-filter="p1">Rose Bouquet</button>
+    
+    
+    <button class="showcase-filter-btn hidden-filter" data-filter="p2">Post</button>
+    <button class="showcase-filter-btn hidden-filter" data-filter="p3">Other 1</button>
+</div>
+
+<div style="text-align:center; margin: 20px 0;">
+    <button class="show-more-btn" id="showMoreBtn" onclick="showAll()">Show More</button>
+    <button class="show-less-btn" id="showLessBtn" onclick="showLess()" style="display:none; padding:10px 20px; background:#666; color:white; border:none; border-radius:20px; cursor:pointer;">Back / Show Less</button>
+</div>
+
+<div class="showcase-grid" id="grid">
+    </div>
+<div id="pagination" style="text-align:center; margin-top:30px; margin-bottom: 50px;"></div>
+<div id="lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); text-align:center; cursor:pointer;">
+        <img id="lightbox-img" src="" style="max-width:90%; max-height:80%; margin-top:5%; border: 3px solid white;">
+    </div>
+
+    <div class="social-media-bar">
+    <a href="https://facebook.com/your-page" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://wa.me/94763810658" target="_blank" class="social-btn wp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://tiktok.com/@your-profile" target="_blank" class="social-btn tt"><i class="fab fa-tiktok"></i></a>
+</div>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <div class="footer-logo">
+                <i class="fas fa-store"></i>
+                <span>Malyx Shop</span>
+            </div>
+            <p class="brand-desc">Your destination for premium digital assets and creative branding tools. Quality guaranteed.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Customer Care</h3>
+            <ul class="footer-links">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Refunds & Returns</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Shop Categories</h3>
+            <ul class="footer-links">
+                <li><a href="#">Logo Kits</a></li>
+                <li><a href="#">Wallpapers</a></li>
+                <li><a href="#">UI Kits</a></li>
+                <li><a href="#">Premium Photos</a></li>
+                <li><a href="#">Post Templates</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul class="contact-info-list">
+                <li><i class="fas fa-phone-alt"></i> +94 76 381 0658</li>
+                <li><i class="fas fa-envelope"></i> sales@malyxdesigns.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 9am - 6pm</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Malyx Designs. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
